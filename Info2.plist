@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildNumber</key>
-	<string>1890</string>
+	<string>2097</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleDisplayName</key>
@@ -43,7 +43,7 @@
 	<key>NSMainNibFile~ipad</key>
 	<string>MainWindow</string>
 	<key>SHA1</key>
-	<string>e8d1eeff9c9140a36621e55b3fdf9753bf9fc1c3</string>
+	<string>5886835493034b040542f11046064df172fe7c50</string>
 	<key>UIInterfaceOrientation</key>
 	<string>UIInterfaceOrientationLandscapeRight</string>
 	<key>UILaunchStoryboardName</key>
@@ -51,7 +51,6 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>wifi</string>
-		<string>gamekit</string>
 		<string>opengles-1</string>
 	</array>
 	<key>UIStatusBarHidden</key>

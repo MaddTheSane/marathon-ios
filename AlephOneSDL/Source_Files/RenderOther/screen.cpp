@@ -985,7 +985,9 @@ static void change_screen_mode(int width, int height, int depth, bool nogl, bool
 #ifdef __WIN32__
 		glewInit();
 #endif
-		if (!OGL_CheckExtension("GL_ARB_vertex_shader") || !OGL_CheckExtension("GL_ARB_fragment_shader") || !OGL_CheckExtension("GL_ARB_shader_objects") || !OGL_CheckExtension("GL_ARB_shading_language_100"))
+   
+    //DCW These extensions aren't needed on ios, I think. Commenting out check.
+	/*	if (!OGL_CheckExtension("GL_ARB_vertex_shader") || !OGL_CheckExtension("GL_ARB_fragment_shader") || !OGL_CheckExtension("GL_ARB_shader_objects") || !OGL_CheckExtension("GL_ARB_shading_language_100"))
 		{
 			logWarning("OpenGL (Shader) renderer is not available");
 			fprintf(stderr, "WARNING: Failed to initialize OpenGL (Shader) renderer\n");
@@ -998,9 +1000,9 @@ static void change_screen_mode(int width, int height, int depth, bool nogl, bool
 										   flags);
 		}
 		else
-		{
+		{*/
 			passed_shader = true;
-		}
+		//}
 	}
 //#endif
 
@@ -1449,10 +1451,12 @@ void render_screen(short ticks_elapsed)
     // (GL must do this before render_view)
     if (screen_mode.acceleration != _no_acceleration)
         clear_screen_margin();
-    
+  
+  clearSmartTrigger();
+  
 	// Render world view
 	render_view(world_view, world_pixels_structure);
-
+    
     // clear Lua drawing from previous frame
     // (SDL is slower if we do this before render_view)
     if (screen_mode.acceleration == _no_acceleration &&
