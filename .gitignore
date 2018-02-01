@@ -2,7 +2,6 @@ M1A1
 .svn
 *.mode?
 *.mode?v3
-xcuserdata
 *.pbxuser
 AlephOneDistribution*
 ProvisioningProfiles
