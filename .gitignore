@@ -1,17 +1,17 @@
 M1A1
 .svn
-blezek.mode1
-blezek.mode1v3
+*.mode?
+*.mode?v3
 xcuserdata
-blezek.pbxuser
+*.pbxuser
 AlephOneDistribution*
 ProvisioningProfiles
 AlephOne-AdHocDistribution
 Secrets.h
 
-xcuserdata/*
-dustinwenz.xcuserdatad
+xcuserdata/
 Libraries/boost_1_63_0/*
 Libraries/*
 
 submodules/*
+.DS_Store
